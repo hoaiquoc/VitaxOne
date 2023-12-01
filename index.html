@@ -1,0 +1,465 @@
+<html lang="vi" style="font-size: 14px;">
+   <head>
+      <meta charset="utf-8">
+      <title>Vitax.One</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="theme-color" content="#000000">
+      <meta name="description" content="Tra cứu hóa đơn">
+      
+      <link href="../css/index.css" rel="stylesheet" id="bootstrap-css">
+      <link rel="icon" type="images/x-icon" href="./img/Logo_orgn_tranperancy1.png" />
+      <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+      <link id="theme-link" rel="stylesheet" href="assets/themes/lara-light-indigo/theme.css">
+      <meta property="og:image" content="./img/screen.png">
+      <meta property="og:image:type" content="image/png">
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XZHTT4E8XF"></script>
+      <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-XZHTT4E8XF")</script>
+      <link href="static/css/main.css" rel="stylesheet">
+      <script src="../js/vue.js"></script>
+      <script src="../js/axios.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   </head>
+   <body class="">
+      <div id="main">
+        
+         <div class="layout-wrapper layout-overlay layout-theme-light layout-home">
+            <div class="layout-topbar" style="display: inline-flex; justify-content: space-between;">
+               <a class="layout-topbar-logo" href="https://info.vitax.one/" target="_blank">
+                  <img src="./img/Logo_orgn_tranperancy1.png" alt=""><div style="font-weight: 400; font-size: 36px;"><span>ViTax.One</div>
+               </a>
+               <div style="float: right;">
+                  <button  @click="openPageRegist()" class="p-button p-component"><span class="p-button-label p-c">Đăng ký</span></button>
+                  <button  @click="openPageLogin()" class="p-button p-component"><span class="p-button-label p-c">Đăng nhập</span></button>
+                  <button  @click="openPageviTax()" class="p-button p-component"><span class="p-button-label p-c">Giới thiệu viTax.one</span></button>
+               </div>
+               <!-- <a type="button" href="https://app.vitax.one/" target="_blank" style="cursor: pointer;"><span style="font-size: 16px; font-weight: 500; color: #ffff; margin-right: 130px; cursor: pointer;">Đăng ký</span></a> -->
+            </div>
+            <div class="layout-main-container">
+               <div class="layout-main">
+                  <!-- <div class="app-loading" id="load" >
+                     <div class="app-loading-box"><img src="../tracuuhoadon/img/loading.gif" alt=""></div>
+                  </div> -->
+                  
+                  <div class="home">
+                     <div class="invoice-search pt-8">
+                        <h3 style="color: #6366F1; font-size:16px; text-align: center;"><span style="color: red;">Để tra cứu tiện dụng hơn, nhanh hơn hãy</span> <span style="color: red;font-size:20px;cursor: pointer;" @click="openPageRegist()">ĐĂNG KÝ</span> để trải nghiệm ứng dụng Vitax.One</h3>
+                        <div class="p-tabview p-component">
+                           <div class="p-tabview-nav-container">
+                              <div class="p-tabview-nav-content" id="pr_id_3">
+                                 <ul class="p-tabview-nav" role="tablist">
+                                    <li class="p-unselectable-text p-tabview-selected p-highlight"   role="presentation"><a role="tab" data-electronic="mst"  class="p-tabview-nav-link tablinks active" id="pr_id_3_header_0" aria-controls="pr_id_3_content_0" aria-selected="true" tabindex="0" @click="openTabs($event)"><span class="p-tabview-title ">Tra cứu rủi ro về thuế</span></a></li>
+                                    <li class="p-unselectable-text p-tabview-selected p-highlight"   role="presentation"><a role="tab" data-electronic="nnt"  class="p-tabview-nav-link tablinks " id="pr_id_3_header_0" aria-controls="pr_id_3_content_0" aria-selected="true" tabindex="0"  @click="openTabs($event)"><span class="p-tabview-title ">Tra cứu hóa đơn điện tử</span></a></li>
+                                    <li class="p-tabview-ink-bar" style="width: 193px; left: 0px;"></li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="p-tabview-panels" style="height: 100%;">
+                              <div id="nnt"  aria-labelledby="pr_id_3_header_0" aria-hidden="false" class="tabcontent p-tabview-panel  " role="tabpanel">
+                                 <div class="grid">
+                                    <div class="col-12 md:col-8">
+                                       <fieldset class="p-fieldset p-component" style="height: auto;" id="pr_id_1">
+                                          <legend class="p-fieldset-legend p-unselectable-text" style="padding: 1.25rem;border: 1px solid #dee2e6;color: #343a40;background: #f8f9fa;font-weight: 700;border-radius: 6px;position: absolute;width: 169px;margin-top: -32px;margin-left: 19px;font-size: 16px;"><span class="p-fieldset-legend-text" id="pr_id_1_header">Tra cứu hóa đơn</span></legend>
+                                          <div id="pr_id_1_content" class="p-toggleable-content" aria-hidden="false" role="region" aria-labelledby="pr_id_1_header">
+                                             <div class="p-fieldset-content" style="height: 430px;">
+                                                <div class="pl-3 pr-3">
+                                                   <form v-on:submit.prevent="guestInvoices()">
+                                                      <div class="p-fluid formgrid grid" style="margin-top:16px ;">
+                                                         <div class="field col-6">
+                                                            <label for="type">Loại hóa đơn<span class="required">*</span></label>
+                                                               <select id="invoice" v-model="khmshdon" style="width: 100%;height: 41px;border-radius: 6px;border-color: #ced4da;" required>
+                                                                   <option value="1">1 - Hóa đơn điện tử giá trị gia tăng </option>
+                                                                   <option value="2">2 - Hóa đơn bán hàng</option>
+                                                                   <option value="3">3 - Hóa đơn bán tài sản công</option>
+                                                                   <option value="4">4 - Hóa đơn bán hàng dự trữ quốc gia</option>
+                                                                   <option value="5">5 - Hóa đơn khác</option>
+                                                                   <option value="6">6 - Phiếu xuất kho kiêm vận chuyển nội bộ</option>
+                                                               </select>
+                                                         </div>
+                                                         <div class="field col-6">
+                                                            <label for="nbmst">MST người bán<span class="required">*</span></label>
+                                                            <input id="nbmst" required class="p-inputtext p-component" value="" v-model="nbmst">
+                                                         </div>
+                                                         <div class="field col-6">
+                                                            <label for="khhdon">Ký hiệu hóa đơn<span class="required">*</span></label>
+                                                            <input id="khhdon" v-model="khhdon" required placeholder="Nhập ký hiệu hóa đơn. Ví dụ C21TAA" class="p-inputtext p-component" value="" >
+                                                         </div>
+                                                         <div class="field col-6">
+                                                            <label for="shdon">Số hóa đơn<span class="required">*</span></label>
+                                                            <input id="shdon" required v-model="shdon"  class="p-inputtext p-component" value="">
+                                                         </div>
+                                                         <div class="field col-4">
+                                                            <label for="tgtttbso">Tổng tiền thanh toán<span class="required">*</span></label>
+                                                            <span class="p-inputnumber p-component p-inputwrapper">
+                                                               <input id="tgtttbso" v-model="tgtttbso" @input="formatPrice(tgtttbso)" role="spinbutton" class="p-inputtext p-component p-inputnumber-input" type="text" inputmode="numeric" required value="">
+                                                            </span>
+                                                         </div>
+                                                         <div class="field col-fixed" style="width: 200px;">
+                                                            <label>&nbsp;  </label>
+                                                            <input v-model="ckey" id="ckey" hidden></input>
+                                                            <img class="captcha" v-bind:src="this.ccontent">
+                                                            <!-- <div class="captcha" >
+                                                              
+                                                            </div> -->
+                                                         </div>
+                                                        
+                                                         <div @click="getCatpcha()" class="field col-fixed pl-0" style="width: 30px; margin-top: 3px;"><label>&nbsp;</label><i class="fa fa-redo  pointer mt-2" style="font-size: 20px;"></i></div>
+                                                         <div class="field col">
+                                                            <label for="cvalue">Nhập mã captcha<span class="required">*</span></label>
+                                                            <input id="cvalue" v-model="cvalue" required class="p-inputtext p-component" value="" style="text-transform: uppercase">
+                                                         </div>
+                                                      </div>
+                                                      <div class="card-container blue-container overflow-hidden">
+                                                         <p>{{result_status.status}}</p>
+                                                         <p>{{result_status.tthaibchu}}</p>
+                                                         <p>{{result_status.ttxlybchu}}</p>
+                                                        
+                                                      </div>
+                                                      <div class="grid mt-1">
+                                                         <div class="col-12 text-center">
+                                                            <button type="submit" aria-label="Tìm kiếm"  class="p-button p-component p-button-outlined p-button-sm">
+                                                               <span class="p-button-icon p-c p-button-icon-left fa fa-search"></span>
+                                                               <span class="p-button-label p-c">Tìm kiếm</span>
+                                                            </button>
+                                                         </div>
+                                                      </div>
+                                                   </form>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </fieldset>
+                                    </div>
+                                    <div class="col-12 md:col-4">
+                                       <fieldset class="p-fieldset p-component" style="height: 430px;" id="pr_id_2">
+                                          <legend class="p-fieldset-legend p-unselectable-text" style="padding: 1.25rem;border: 1px solid #dee2e6;color: #343a40;background: #f8f9fa;font-weight: 700;border-radius: 6px;position: absolute;width: 169px;margin-top: -32px;margin-left: 19px;font-size: 16px;"><span class="p-fieldset-legend-text" id="pr_id_2_header">Đọc hóa đơn Xml</span></legend>
+                                          <div id="pr_id_2_content" class="p-toggleable-content" aria-hidden="false" role="region" aria-labelledby="pr_id_2_header">
+                                             <div class="p-fieldset-content" style="height: 401px;">
+                                                <div style="height: 80%; display: flex; align-items: center; justify-content: center;">
+                                                   <div class="border-2 border-dashed surface-border p-3 text-center"
+                                                      @dragover="dragover" @dragleave="dragleave" @drop="drop">
+                                                      
+                                                      <input id="assetsFieldHandle"  type="file" accept=".xml" hidden=""  @change="onChange()" ref="file" style="display: none;">
+                                                      <p><b>Kéo thả file hóa đơn vào đây hoặc click để chọn file</b></p>
+                                                      <p><i>(Chỉ hỗ trợ tệp tin .xml)</i></p>
+                                                    
+                                                      <button aria-label="Duyệt file" @click="getFile()"  class="p-button p-component"><span class="p-button-icon p-c p-button-icon-left fa fa-upload"></span><span class="p-button-label p-c">Duyệt file</span></button>
+                                                      <div>
+                                                         <div></div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </fieldset>
+                                    </div>
+                                 </div>
+                                 <div style="color: black !important;">
+                                    <div class="card mt-5" v-if="isshow">
+                                       <div v-html="dataXml.htmlContent"></div>
+                                    </div>
+                                    <div class="card mt-5"  v-if="isshow">
+                                       <div class="main-page" id="main-page_new">
+                                          <div class="heading-content" >
+                                            <div class="title-heading text-center" >
+                                              <h2 class="mb-1">KẾT QUẢ KIỂM TRA THÔNG TIN HÓA ĐƠN</h2>
+                                              <b>Tại thời điểm ngày {{dataXml.dateNow}}</b>
+                                            </div>
+                                            <br/>
+                                          </div>
+                                          <div class="content" style="display: block; color: black;">
+                                            <div class="text-center">
+                                              <h4 class="mb-2">THÔNG TIN HÓA ĐƠN</h4>
+                                            </div>
+                                            <div class="grid">
+                                              <div class="col-6 bordered" style="border-right: 0">
+                                                <p>- Mã số thuế người bán: {{dataXml.nbmst}}</p>
+                                                <p>- Tổng tiền thanh toán: {{dataXml.tgtttbso}}</p>
+                                                <p>- Số hóa đơn: {{formatSHDON}}</p>
+                                                <p>- Ký hiệu hóa đơn: {{dataXml.khhdgoc}}</p>
+                                              </div>
+                                              <div class="col-6 bordered">
+                                                <p>- Mẫu hóa đơn: {{dataXml.thdon}}</p>
+                                                <p>- Ngày lập: {{dataXml.nlapval}}</p>
+                                                <p>- Ngày ký: {{dataXml.nlapval}}&nbsp; <span class="alert-success">(Trùng ngày lập)</span>
+                                                </p>
+                                                <p>- Ngày cấp mã: {{dataXml.nlapval}}&nbsp; <span class="alert-success">(Trùng ngày ký)</span>
+                                                </p>
+                                              </div>
+                                            </div>
+                                            <br/>
+                                            <div class="text-center">
+                                              <h4 class="mb-2">THÔNG TIN CHỮ KÝ SỐ TRÊN HÓA ĐƠN</h4>
+                                            </div>
+                                            <b>Chữ ký số người bán:</b>
+                                            <p>- Ký bởi: {{dataXml.signCompanyNameNB}}</p>
+                                            <p>- Nhà cung cấp: {{dataXml.ncc}}</p>
+                                            <p>- Hiệu lực: từ {{dataXml.dateStart}} đến {{dataXml.dateEnd}}</p>
+                                            <p>- Serial number: {{dataXml.serialNumber}}</p>
+                                            <p>
+                                              <span class="alert-success">- Tên người bán và tên người ký trùng khớp</span>
+                                            </p>
+                                            <b>Chữ ký của cơ quan thuế:</b>
+                                            <p>- Ký bởi: {{dataXml.signCompanyNameTCT}}</p>
+                                            <p>- Ngày ký: {{dataXml.signDateTCT}}</p>
+                                            <br/>
+                                            <div class="text-center">
+                                              <h4 class="mb-2">TÌNH TRẠNG CẤP MÃ VÀ LỊCH SỬ HÓA ĐƠN</h4>
+                                            </div>
+                                            <p>- Hóa đơn đã được cấp mã của cơ quan thuế (Mã CQT: {{dataXml.mccqt}})</p>
+                                            <br/>
+                                            <div class="text-center">
+                                              <h4 class="mb-0">TÌNH TRẠNG HOẠT ĐỘNG CỦA MST NGƯỜI BÁN, NGƯỜI MUA</h4>
+                                              <i>(Thông tin dùng để đối chiếu từ dữ liệu của cơ quan thuế)</i>
+                                            </div>
+                                            <b>Người bán:</b>
+                                            <p>- Mã số thuế: {{dataXml.nbmst}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trạng thái:&nbsp; <span>{{dataXml.nbstatus}}</span>
+                                            </p>
+                                            <p>- Tên đơn vị: {{dataXml.nbten}}</p>
+                                            <p>- Địa chỉ: {{dataXml.nbdchi}}</p>
+                                            <b>Người mua:</b>
+                                            <p>- Mã số thuế: {{dataXml.nmmst}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trạng thái:&nbsp; <span>{{dataXml.nmstatus}}</span>
+                                            </p>
+                                            <p>- Tên đơn vị: {{dataXml.nmten}}</p>
+                                            <p>- Địa chỉ: {{dataXml.nmdchi}}</p>
+                                          </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div id="mst" aria-labelledby="pr_id_3_header_0" aria-hidden="false" class=" tabcontent p-tabview-panel  active" role="tabpanel" style="height: 480px;">
+                                 <div class="container responsive-container" style="width: 50%; text-align: center;  ">
+                                    <div class="search-bar" >
+                                      <div class="row" >
+                                        <div class="form-group col-lg-1 col-md-1 col-sm-1" style="margin-bottom: 0px;">
+                                          <button style="margin-top: 5px; color: gray;"><i class="fa fa-search"></i></button>
+                                        </div>
+                                          <div class="form-group col-lg-8  col-sm-7 col-md-8" style="margin-bottom: 0px;">
+                                            <input  placeholder="Nhập thông tin mã số thuế" v-on:keyup.enter="getProfile() " v-model="search" id="searchMST">
+                                          </div>
+                                          <div class="form-group col-lg-2  col-sm-2 col-md-2" style="width: 135px;height: 40px;margin-bottom: 0px;">
+                                          <button  @click="getProfile() "  class="submit"><i class="fa fa-search"></i> Tìm kiếm</button>
+                                          <input type="hidden" id="mstval" v-model="result.mst"/>
+                                          </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="container" v-show="Object.keys(result).length !== 0" style="width: 100%; text-align: center; flex: 1; margin-top: 50px;">
+                                    <table style="width: 100%; text-align: center;" v-if="isCheck == true">
+                                      <tr>
+                                          <th style="width: 70%;padding-bottom: 15px; vertical-align: top;"> 
+                                            <div style="margin-top: 5px;">
+                                              
+                                              <ul class="nav nav-pills">
+                                                <li><a href="#"  id="mainTab" class="tablinks active" @click="openTab($event, 'kqua')">Kết quả</a></li>
+                                                <li><a href="#"  class="tablinks" @click="openTab($event, 'ttchung')">Thông tin chung</a></li>
+                                                <!-- <li><a href="#"  class="tablinks" @click="openTab($event, 'History')">Quá trình thay đổi</a></li>
+                                                <li><a href="#"  class="tablinks" @click="openTab($event, 'Search')">Sự kiện liên quan</a></li> -->
+                                                <!-- <li><a href="#"  class="tablinks" @click="openTab($event, 'AboutUs')">About viTax.one</a></li> -->
+                                              </ul>
+                                                    
+                                              <div id="kqua" class="tabcontentmst" style="display: block; width: 100%;" v-if="status == 0">
+                                                  <p style="padding:25px">Chúc mừng , VitaxOne <span style="color: rgb(117, 233, 117);font-size: 18px;">không phát hiện</span> rủi ro nào  cho mã số thuế bạn tìm kiếm</p>
+                                              </div>
+                                              <div id="kqua" class="tabcontentmst" style="display: block; width: 100%;" v-if="status == 1 && temp == 0">
+                                                <p style="padding: 25px">Mã số thuế {{mst}} đang có cảnh báo <b style="color: red;">{{mess}}</b> </p>
+                                                <p style="padding: 5px 25px">Link tra cứu: <a v-bind:href="link" target="_blank">{{link}}</a></p>
+                                                <p style="padding: 5px 25px">Mã số nội bộ: {{mstnb}}</p>
+                                            </div>
+                      
+                                            <div id="kqua" class="tabcontentmst" style="display: block; width: 100%;" v-if="status == 1 && temp == 1">
+                                              <p style="padding: 25px">Link thông tin: <a v-bind:href="link" target="_blank">{{link}}</a></p>
+                                              <p style="padding: 5px 25px">Tình trạng: {{tinhTrang}}</p>
+                                          </div>
+                                              <div id="ttchung" class="tabcontentmst" style=" visibility: hidden; width: 100%;  "  >
+                                                <table >
+                                                  <tr>
+                                                      <th style="width: 30%;padding:20px 25px 15px;">Mã số thuế</th> 
+                                                      <th style="padding:20px 0;;font-weight: normal;"><strong>{{result.mst}}</strong> 
+                                                    </th>
+                                                      <input type="hidden" id="txtSearch" v-bind:value="result.mst"/>
+                                                  </tr>
+                                                  <tr>
+                                                      <th style="width: 30%;padding:0 25px 15px;">Tên công ty </th>
+                                                      <th style="padding-bottom: 15px;font-weight: normal;">{{result.name}}
+                                                        <input type="hidden" id="ctyname" v-bind:value="result.name"/>
+                                                      </th>
+                                                  </tr>
+                                                  <tr>
+                                                      <th style="width: 30%;padding:0 25px 15px;">Địa chỉ</th>
+                                                      <th style="padding-bottom: 15px;font-weight: normal;">{{result.address}}
+                                                        <input type="hidden" id="ctyaddr" v-bind:value="result.address"/>
+                                                      </th>
+                                                  </tr>
+                                                  <!-- <tr>
+                                                      <th style="width: 30%;padding:0 25px 15px;">Người đại diện</th>
+                                                      <th style="padding-bottom: 15px;font-weight: normal;">{{result.deputy}}</th>
+                                                  </tr> -->
+                                                  <tr>
+                                                    <th style="width: 30%;padding:0 25px 15px;">Cục thuế quản lý</th>
+                                                    <th style="padding-bottom: 15px;font-weight: normal;">{{result.cqt_ql}}</th>
+                                                </tr>
+                                                  <tr>
+                                                      <th style="width: 30%;padding:0 25px 15px;">Trạng thái hoạt động</th>
+                                                      <th style="padding-bottom: 15px;font-weight: normal;">{{result.status}}</th>
+                                                  </tr>
+                                              </table>
+                                              
+                                              <!-- <p><strong>Ngành nghề kinh doanh</strong></p>
+                                              <span v-html="result.nnkd"></span> -->
+                                              </div>
+                                              
+                                              <div id="History" class="tabcontentmst">
+                                                <p style="padding: 0 25px">Hệ thống đang cập nhật...</p> 
+                                              </div>
+                                              
+                                              <div id="Search" class="tabcontentmst" style="width: 100%; vertical-align: top;  ">
+                                                <ul v-for="(items,index) in listSearch" style="vertical-align: top; text-align: left; padding-left: 0cm;">
+                                                  <p style="padding: 0 25px">
+                                                      <a v-bind:href="items.displayUrl"  target="_blank">{{items.name}}</a>
+                                                        </br> <a v-bind:href="items.url"  target="_blank">{{items.url}}</a><br/>
+                                                      <span>  {{items.snippet}} </span>
+                                                  </p>
+                                                  <br/>
+                                                  <br/>
+                                                </ul>
+                                              </div>
+                                            
+                                              <!-- <div id="AboutUs" class="tabcontent" style="width: 100%; vertical-align: top;">
+                                                <p style="font-size: x-large;"><strong>BÀI TOÁN</strong></p>
+                                                <p style="font-size: medium;">Một trong những chứng từ kế toán quan trọng của mọi đơn vị kinh doanh là hóa đơn. Để hóa đơn được chấp nhận v&agrave; t&iacute;nh Vào chi ph&iacute;, được khấu trừ, t&iacute;nh đ&uacute;ng thuế th&igrave; khi xử lý hóa đơn, kế toán phải rất cẩn trọng ch&uacute; &yacute; từng t&igrave;nh huống phát sinh của n&oacute;.</p>
+                                                <p><strong>VẤN ĐỀ CỦA HÓA ĐƠN ĐẦU VÀO:</strong></p>
+                                                <table style="border-collapse: collapse; width: 100%; height: 311px;" border="0">
+                                                <tbody>
+                                                <tr style="height: 311px;">
+                                                <td style="width: 60%; height: 311px; vertical-align: top; padding-right: 25px;">
+                                                <p style="font-size: medium;">Việc xác thực hóa đơn là hợp lệ hay là không hợp lệ y&ecirc;u cầu phải có công cụ chuy&ecirc;n m&ocirc;n nhất định, m&agrave; không phải nh&agrave; cung cấp hóa đơn điện tử n&agrave;o cũng cung cấp k&egrave;m theo v&agrave; phải làm từng tờ mất thời gian.</p>
+                                                <p style="font-size: medium;">Việc kịp thời nhận định hóa đơn có bị thay đổi điều chỉnh hay không để hướng khai báo, báo cáo thuế phù hợp</p>
+                                                <p style="font-size: medium;">Việc kịp thời phát hiện Đơn vị phát hành hóa đơn có bị rủi ro về thuế hay không &hellip;..</p>
+                                                </td>
+                                                <td style="width: 40%; height: 311px; align-items: right;"><img src="./image/AboutUs001.png" alt="" /></td>
+                                                </tr>
+                                                </tbody>
+                                                </table>
+                                                <p><strong>VẤN ĐỀ CỦA HÓA ĐƠN ĐẦU RA:</strong></p>
+                                                <p style="font-size: medium;">Hiện nay, khi doanh nghiệp phát hành hóa đơn b&aacute;n ra phải trải qua qu&aacute; trình truyền nhận l&ecirc;n Cơ quan thuế. C&aacute;c vấn đề Doanh nghiệp quan tâm hiện nay là không &iacute;t.</p>
+                                                <table style="border-collapse: collapse; width: 100%; height: 311px;" border="0">
+                                                <tbody>
+                                                <tr style="height: 311px;">
+                                                <td style="width: 60%; height: 311px; vertical-align: top; padding-right: 25px;">
+                                                <p style="font-size: medium;">Làm sao để đảm bảo hóa đơn của bạn đơn được CQT ghi nhận? Để làm điều đó, doanh nghiệp bạn phải tra cứu lại từ cổng dịch vụ hóa đơn của CQT</p>
+                                                <p style="font-size: medium;">Làm sao tiếp nhận thông báo giải trình về hóa đơn của CQT? để kịp thời phát hiện hóa đơn b&aacute;n ra của Doanh nghiệp có sai s&oacute;t? cần điều chỉnh?</p>
+                                                <p style="font-size: medium;">Làm sao kịp thời phát hiện Đơn vị mua hàng hóa có sự thay đổi thông tin ảnh hưởng đến thu công nợ, ký gửi, ủy th&aacute;c hàng hóa &hellip;..</p>
+                                                </td>
+                                                <td style="width: 40%; height: 311px;"><img src="./image/AboutUs002.png" alt="" /></td>
+                                                </tr>
+                                                </tbody>
+                                                </table>
+                                                <p style="font-size: x-large;"><strong>GIẢI PHÁP viTax.One</strong></p>
+                                                <p><strong>TỰ ĐỘNG XỬ LÝ SỐ LIỆU:</strong></p>
+                                                <p style="font-size: medium;">Hiện nay, hóa đơn đơn được số hóa. Nhờ đó, Doanh nghiệp có thể áp dụng việc xử lý số liệu tự động trong quy trình quản lý.</p>
+                                                <p><strong>Xây dựng Trung tâm dữ liệu hóa đơn Vào/Ra tại Cty để chủ động xử lý một c&aacute;ch nhanh ch&oacute;ng</strong></p>
+                                                <table style="border-collapse: collapse; width: 100%; height: 311px;" border="0">
+                                                <tbody>
+                                                <tr style="height: 311px;">
+                                                <td style="width: 60%; height: 311px; vertical-align: top; padding-right: 25px;">
+                                                <p style="font-size: medium;">Tập hợp dữ liệu hóa đơn Vào/Ra của Cty về hệ thống nội bộ Cty một c&aacute;ch tự động v&agrave; li&ecirc;n tục.</p>
+                                                <p style="font-size: medium;">Ph&acirc;n t&aacute;ch chi tiết dữ liệu hóa đơn sẵn s&agrave;ng cho việc t&igrave;m kiếm, truy xuất, báo cáo, t&iacute;ch hợp Vào c&aacute;c quy trình phần mềm của doanh nghiệp.</p>
+                                                <p style="font-size: medium;">Tự động ph&acirc;n t&iacute;ch, s&agrave;n lọc v&agrave; cảnh báo c&aacute;c rủi ro về thuế của hóa đơn v&agrave; c&aacute;c đối tượng li&ecirc;n quan trong hóa đơn như:</p>
+                                                <p style="font-size: medium;">-<em>hóa đơn </em><em>khống </em><em>/ lổi / bị điều chỉnh</em></p>
+                                                <p style="font-size: medium;">-<em>hàng hóa nhập kho</em></p>
+                                                <p style="font-size: medium;">-<em>Kh&aacute;ch hàng, Nh&agrave; cung cấp có rủi ro về công nợ, về Thuế</em></p>
+                                                </td>
+                                                <td style="width: 40%; height: 311px;"><img src="./image/AboutUs003.png" alt="" /></td>
+                                                </tr>
+                                                </tbody>
+                                                </table>
+                                                <p><strong>Cung cấp phần mềm ứng dụng trong việc tự động hóa qu&aacute; trình xử lý số liệu hóa đơn. </strong></p>
+                                                <table style="border-collapse: collapse; width: 100%; height: 311px;" border="0">
+                                                <tbody>
+                                                <tr style="height: 311px;">
+                                                <td style="width: 60%; height: 311px; vertical-align: top; padding-right: 25px;">
+                                                <p style="font-size: medium;">Ứng dụng trong việc t&iacute;ch hợp <em>(kết nối với hệ </em><em>thống </em><em>quản </em><em>lý nội bộ doanh nghiệp)</em> để tự động nhận dạng dữ liệu hạch toán kế toán, t&iacute;nh lượng hàng nhập kho.</p>
+                                                <p style="font-size: medium;">Ứng dụng t&iacute;ch hợp việc nhận dạng rủi ro trong:</p>
+                                                <p style="font-size: medium;"><em>- Cảnh báo hóa đơn hợp lệ</em></p>
+                                                <p style="font-size: medium;"><em>- Tự động so khớp dữ liệu với hệ thống kế toán nội bộ như: Nh&agrave; cung cấp - Khoản mục chi ph&iacute;&nbsp; &ndash; Hợp đồng li&ecirc;n quan.</em></p>
+                                                <p style="font-size: medium;"><em>- Tự động so khớp dữ liệu của hệ thống kế toán nội bộ như: Sản phẩm, dịch vụ &ndash; Đơn vị t&iacute;nh &ndash; Quy c&aacute;ch &ndash; Số lượng,&hellip;&nbsp; để có lu&ocirc;n phiếu nhập kho đ&uacute;ng quy c&aacute;ch.</em></p>
+                                                <p style="font-size: medium;"><em>- Tạo lập bộ lọc gi&uacute;p công t&aacute;c quyết toán c&aacute;c khoản mục chi ph&iacute; nhanh </em><em>ch&oacute;ng</em><em>.</em></p>
+                                                </td>
+                                                <td style="width: 40%; height: 311px;"><img src="./image/AboutUs004.png" alt="" /></td>
+                                                </tr>
+                                                </tbody>
+                                                </table>
+                                                <p><strong>Lưu trữ an to&agrave;n, truy xuất mọi l&uacute;c. </strong></p>
+                                                <table style="border-collapse: collapse; width: 100%; height: 311px;" border="0">
+                                                <tbody>
+                                                <tr style="height: 311px;">
+                                                <td style="width: 60%; height: 311px; vertical-align: top; padding-right: 25px;">
+                                                <p style="font-size: medium;">Trung tâm dữ liệu ri&ecirc;ng của doanh nghiệp n&ecirc;n việc truy xuất sẽ nhanh v&agrave; không bị t&aacute;c động bởi lưu lượng truyền nhận của cộng đồng Người nộp thuế.</p>
+                                                <p style="font-size: medium;">Lưu trữ hóa đơn an to&agrave;n, đ&uacute;ng luật thuế 10 năm</p>
+                                                <p>&nbsp;</p>
+                                                <p>&nbsp;</p>
+                                                <p>&nbsp;</p>
+                                                <p>&nbsp;</p>
+                                                <p>&nbsp;</p>
+                                                </td>
+                                                <td style="width: 40%; height: 311px;"><img src="./image/AboutUs005.png" alt="" /></td>
+                                                </tr>
+                                                </tbody>
+                                                </table>
+                                                <p><img style="width: 100%;" src="./image/AboutUs006.png" alt="" /></p>
+                                                
+                                              </div> -->
+                                              
+                                            </div>
+                                          </th>
+                                      </tr>
+                                    </table>
+                      
+                                  </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="layout-footer mb-8 dientu" target="_blank" rel="noreferrer">
+                  <ul>
+                     <li><span style="font-weight: bold;">© Copyright - VITAX CO.</span></li>
+                     <li>© Hotline:<span style="font-weight: bold;"> 028 888 95 889</span> - Email: <a href="mailto:info@vitax.one">info@vitax.one.</a></li>
+                     <li>© Số tài khoản: <span style="font-weight: bold;">114002945643 – NH TMCP Công Thương Việt Nam (VietinBank) – CN TP HCM.</span></li>
+                     <li>Website: <a href="https://vitax.one">https://vitax.one.</a></li>
+                  </ul>
+               </div>
+         </div>
+       
+         <div class="p-toast p-component p-toast-top-right">
+            <div></div>
+         </div>
+      </div>
+   </body>
+   <script src="./js/tracuu.js"></script> 
+</html>
+
+
+<style>
+    .home{
+        background-image: url("img/background.jpeg");
+    }
+
+    #invoice:hover{
+        border-color: #6366F1 !important;
+    }
+
+    #invoice:focus{
+      box-shadow: 0 0 0 0.2rem #C7D2FE !important;
+      border-color: #6366F1 !important;
+    }
+
+    #invoice:focus-visible{
+      box-shadow: 0 0 0 0.2rem #C7D2FE !important;
+      border-color: #6366F1 !important;
+    }
+
+    
+</style>

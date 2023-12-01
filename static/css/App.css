@@ -1,0 +1,194 @@
+body {
+    min-width: 890px;
+}
+
+.iam-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.iam-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.template-preview {
+    width: 100%;
+    height: 1500px;
+    border: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.invoice-blank {
+    background-image: url(./assets/images/viewinvoice-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 180%;
+    height: 100%;
+}
+
+label .required {
+    color: red;
+    margin-left: 5px;
+}
+
+body.loading {
+    pointer-events: none;
+}
+
+body.loading .app-loading {
+    display: block;
+    z-index: 10000;
+}
+
+.app-loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.app-loading > .app-loading-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: #ffffff3d;
+}
+
+.captcha {
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    height: 40px;
+}
+
+.captcha > svg {
+    width: 100%;
+    height: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.layout-breadcrumb {
+    padding: 5rem 2rem 0 2rem;
+    background-color: var(--surface-50);
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+}
+
+.layout-breadcrumb .p-breadcrumb {
+    background: transparent;
+    border: none;
+}
+
+.layout-breadcrumb .p-megamenu {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.layout-main-container {
+    padding: 8.5rem 2rem 0 4rem;
+}
+
+.layout-home .layout-main-container {
+    padding: 5rem 2rem 0 4rem;
+}
+
+.layout-home .layout-topbar {
+    background-color: #343cb8;
+}
+
+.layout-home .layout-topbar .layout-topbar-logo {
+    color: white;
+}
+
+.table-actions .p-button.p-button-icon-only.p-button-rounded.p-button-sm {
+    height: 2rem;
+    width: 2rem;
+    padding: 13px;
+}
+
+.p-datatable.p-datatable-sm .p-datatable-tbody > tr > td.table-actions {
+    padding: 0 0.5rem;
+}
+
+.p-datatable-table .p-datatable-tbody > tr:hover > td.table-actions {
+    right: 0;
+    position: sticky;
+    background: inherit;
+}
+
+.p-datatable.p-datatable-gridlines .p-datatable-thead > tr > th,
+.p-datatable.p-datatable-sm .p-datatable-tbody > tr > td {
+    border-right: 0;
+    border-top: 0;
+}
+
+.p-datatable.p-datatable-gridlines .p-datatable-thead > tr {
+    border-top: 1px solid #dee2e6;
+}
+
+.home {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0 -2rem;
+}
+
+.home .invoice-action {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.home .invoice-search {
+    width: 80%;
+    min-width: 890px;
+    max-width: 1200px;
+    min-height: 600px;
+    margin: 0 auto;
+}
+
+.home .invoice-buttons {
+    width: 80%;
+    min-width: 890px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--surface-ground);
+}
+
+.p-fieldset {
+    color: #000000;
+}
+
+.p-menubar .menu-w-15rem .p-submenu-list {
+    width: 15rem;
+}
+
+.true-icon {
+    color: var(--primary-color);
+}
+
+.false-icon {
+    color: #dc3545;
+}
+
+.p-datatable .p-datatable-tbody > tr > td,
+.p-datatable .p-datatable-tbody > tr > td > div {
+    word-break: break-word;
+    white-space: break-spaces;
+}
+
+.text-ellipsis {
+    white-space: nowrap !important;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,15 +1,14 @@
 # VitaxOne
-viTax.One  không chỉ cung cấp giải pháp ứng dụng app.viTax.One online mà còn cung cấp giải pháp API “ĐỒNG BỘ DỮ LIỆU HÓA ĐƠN ” tích hợp với hệ thống ERP của doanh nghiệp giúp Doanh nghiệp áp dụng quy trình phát hành hóa đơn một cách trực tiếp từ hệ thống ERP, nhận dữ liệu hóa đơn mua vào hệ thống ERP một cách tự động thông qua Giải pháp api.viTax.One
+viTax.One not only provides app.viTax.One online application solution but also provides API solution "INVOICE DATA SYNC" integrated with the enterprise's ERP system to help businesses apply the issuance process invoices directly from the ERP system, receive purchase invoice data into the ERP system automatically through api.viTax.One Solution
 
-viTax.One là một giải pháp “Tự động - Thông minh” độc nhất trên thị trường sẽ giúp cho Người nộp thuế tự động cập nhật, kiểm tra và đối soát từng hóa đơn, từng mã số thuế một cách thông minh, nhanh chóng, hiệu quả !
+viTax.One is a unique "Automatic - Smart" solution on the market that will help taxpayers automatically update, check and compare each invoice and each tax code in a smart and quick way. , effective !
 
-Tự động đưa ra cảnh báo rủi ro về hóa​ đơn
+Automatically issue invoice risk warnings
 
-Tự động đối soát tình trạng hóa đơn đang bị Thay thế / Điều chỉnh / Hủy hàng ngày.
+Automatically check the status of invoices being replaced / adjusted / canceled daily.
 
-Tự động phát hiện mã số thuế đang bị cơ quan thuế cảnh báo; xác định nguyên nhân bị cảnh báo.
+Automatically detect tax codes that are being warned by tax authorities; Determine the cause of the warning.
 
-Tự động phát hiện doanh nghiệp có thay đổi thông tin Đăng ký kinh doanh (thay đổi người đại diện pháp luật, thay đổi địa chỉ, tăng giảm vốn đăng ký…)
+Automatically detect if a business has changed its Business Registration information (change of legal representative, change of address, increase or decrease of registered capital...)
 
-Giúp doanh nghiệp hạn chế hầu hết những rủi ro về Thuế liên quan đến hóa đơn, mã số thuế của doanh nghiệp kinh doanh.
-
+Helps businesses limit most tax risks related to invoices and tax codes of business enterprises.
